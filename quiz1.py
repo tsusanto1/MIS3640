@@ -1,7 +1,7 @@
 #Question1
 
 def crazy_about_9(a, b):
-    if a == 9 or b == 9 or abs(a-b) == 9:
+    if a == 9 or b == 9 or abs(a-b) == 9 or a+b == 9:
         return True
     else:
         return False
@@ -29,14 +29,17 @@ years (for example, 2000).
 
 
 def leap_year(year):
+    return year % 400 == 0 or year % 4 == 0 and year % 100 != 0
+
+"""
     if year % 400 == 0:
         return True
-    elif year % 4 == 0:
+    elif year % 4 == 0 and year % 100 != 0:
         return True
-    elif year % 100 == 0:
-        return False
     else:
         return False
+"""
+
 
 print(leap_year(1900))
 print(leap_year(2016))
