@@ -79,11 +79,40 @@ def isWordGuessed(secretWord, lettersGuessed):
 # When you've completed your function isWordGuessed, uncomment these three lines
 # and run this file to test!
 
-secretWord = 'apple'
-lettersGuessed = ['e', 'k', 'o', 'p', 'r', 's']
-print(isWordGuessed(secretWord, lettersGuessed))
+# secretWord = 'apple'
+# lettersGuessed = ['e', 'k', 'o', 'p', 'r', 's']
+# print(isWordGuessed(secretWord, lettersGuessed))
 
 # Expected output:
 # False
+
+def getGuessedWord(secretWord, lettersGuessed):
+    '''
+    secretWord: string, the word the user is guessing
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters and underscores that represents
+      what letters in secretWord have been guessed so far.
+    '''
+    # FILL IN YOUR CODE HERE...
+    result = ""
+    for i in secretWord:
+      if i in lettersGuessed:
+        result += i           #for a letter guessed that is in the secret word, add the letter to the result
+      else:
+        result += "_"         #for a letter guessed that is not in the secret word, add _ instead to the result
+    return result
+
+    
+
+
+# When you've completed your function getGuessedWord, uncomment these three lines
+# and run this file to test!
+
+secretWord = 'apple'
+lettersGuessed = ['e', 'i', 'k', 'p', 'r', 's']
+print(getGuessedWord(secretWord, lettersGuessed))
+
+# Expected output:
+# '_ pp_ e'
 
 
